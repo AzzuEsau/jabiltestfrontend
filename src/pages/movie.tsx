@@ -123,7 +123,13 @@ const Movie: React.FunctionComponent<IPage & RouteProps> = porps => {
 
                     <p>Director</p>
                     <select name="fKdirector" onChange={handleInputChange} defaultValue={movie.fKdirector.id}>
-                        {directories.map(current => <option key={current.id} value={current.id}>{current.firstName + " " + current.lastName}</option>)}
+                        {directories.map(current =>
+                        {
+                            if(current.enabled)
+                                return (
+                                    <option key={current.id} value={current.id}>{current.firstName + " " + current.lastName}</option>)}
+                                )
+                        } 
                     </select>
                     
                 </form>
