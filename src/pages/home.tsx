@@ -6,7 +6,7 @@ const Home: React.FunctionComponent<IPage> = porps => {
     // Sabes cuando va a suceder
 
     return (
-        <div className="">
+        <div className="mx-auto container bg-slate-600 min-h-screen">
             <h1 className="text-2xl font-semibold">Movies Manager</h1>
             
             <p className="mt-10">choose the type</p>
