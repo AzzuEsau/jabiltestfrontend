@@ -14,9 +14,12 @@ const Directories: React.FunctionComponent<IPage> = porps => {
     }, [setDirectories]);
 
     return (
-        <div>
-            <p>Hola mundo soy el catalogo de los directores</p>
-            <p>Our registered directors are:</p>
+        <div className="mx-auto container bg-slate-600 min-h-screen">
+            <h1 className="text-2xl font-semibold p-5">Directories Gallery</h1>
+            <div className="p-2">
+                <a className="bg-lime-500 hover:bg-lime-600 rounded-lg p-2" href={'/directories/newdirector'}>Create Director</a>
+            </div>
+            <p>We have some directors like:</p>
             <br />
 
 
@@ -26,11 +29,13 @@ const Directories: React.FunctionComponent<IPage> = porps => {
                     return(
                         <div key={current.id}>
                             <p>--------------------------------------------------------------</p>
-                            <p>{current.firstName} {current.lastName}</p>
+                            <p className="text-xl font-semibold">{current.firstName} {current.lastName}</p>
                             <p>{current.age} years old</p>
                             <br />
-                            <a href={'/directories/'+current.id}>Open</a>
-                            <br />
+
+                            <div className="p-2">
+                                <a className="bg-blue-400 hover:bg-blue-300 rounded-lg p-2" href={'/directories/'+current.id}>Edit</a>
+                            </div>
                         </div>
                 )
             })}

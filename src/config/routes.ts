@@ -5,8 +5,9 @@ import Home from "../pages/home";
 import Movies from "../pages/movies";
 import Movie from "../pages/movie";
 import Directories from "../pages/directories";
-import Directory from "../pages/directory";
+import Directory from "../pages/director";
 import NewMovie from "../pages/newmovie";
+import NewDirector from "../pages/newdirector";
 
 
 
@@ -40,6 +41,11 @@ const routes : IRoute[] = [
         path: '/Directories/:number',
         name: 'Directories',
         component: Directory,
+    },
+    {
+        path: '/Directories/NewDirector',
+        name: 'NewDirector',
+        component: NewDirector,
     }
 ]
 
